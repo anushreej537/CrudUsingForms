@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Empname</th>
+                <th>Emp salary</th>
+                <th>Email</th>
+                <th>UPDATE</th>
+                <th>DELETE</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{i.ename}}</td>
+                <td>{{i.esal}}</td>
+                <td>{{i.email}}</td>
+                <td><a href="/updateinfo/{{i.id}}">UPDATE</a></td>
+                <td><a href="/deleteinfo/{{i.id}}/">DELETE</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
